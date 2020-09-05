@@ -5,6 +5,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     semi: ['error', 'always'],
-    quotes: ['error', 'double']
+    quotes: ['error', 'single'],
+    'comma-dangle': ['error', 'never']
   }
 };
