@@ -1,0 +1,14 @@
+{
+  "libraryName": "ReactNativeCppModule1",
+  "outputDirectory": "./lib/cpp-generated",
+  "moduleSpecName": "ReactNativeCppModule1Spec",
+  "generators": [
+    "descriptors",
+    "events",
+    "props",
+    "tests",
+    "shadow-nodes",
+    "modules"
+  ],
+  "inputFile": "./src/turboModule.ts"
+}
