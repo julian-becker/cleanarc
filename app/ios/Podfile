@@ -8,6 +8,8 @@ target 'cleanarc' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-cpp-module1', :path => '../node_modules/@workspace/react-native-cpp-module1'
+
   target 'cleanarcTests' do
     inherit! :complete
     # Pods for testing

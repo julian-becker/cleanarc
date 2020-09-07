@@ -1,3 +1,5 @@
 rootProject.name = 'cleanarc'
+include ':@workspace_react-native-cpp-module1'
+project(':@workspace_react-native-cpp-module1').projectDir = new File(rootProject.projectDir, '../../packages/react-native-cpp-module1/android')
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
