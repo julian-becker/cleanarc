@@ -9,7 +9,7 @@
         ],
         "nohoist": [
             "**/@workspace/react-native-cpp-module1",
-            "**/@workspace/app",
+            "**/@workspace/react-native-cpp-module1/**",
             "**/react-native",
             "**/react-native/**",
             "**/react-native-*",
