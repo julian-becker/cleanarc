@@ -28,7 +28,10 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "bootstrap": "yarn example && yarn && yarn pods",
+    "generate": "yarn run codegen && yarn run codepack",
+    "codegen": "node ./node_modules/react-native-tscodegen/bin/cli ./react-native-tscodegen.json",
+    "codepack": "copyfiles -u 2 ./lib/cpp-generated/NativeModules.* ./cpp/react/modules/TurboYaml/"
   },
   "keywords": [
     "react-native",
@@ -56,8 +59,11 @@
     "@release-it/conventional-changelog": "^1.1.4",
     "@types/jest": "^26.0.13",
     "@types/react": "^16.9.19",
-    "@types/react-native": "0.62.13",
+    "@types/react-native": "^0.63.2",
+    "ansi-regex": "^5.0.0",
+    "ansi-styles": "^4.2.1",
     "commitlint": "^8.3.5",
+    "copyfiles": "^2.3.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
@@ -65,11 +71,16 @@
     "jest": "^26.0.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
-    "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
     "react-native-codegen": "^0.0.2",
+    "react-native-tscodegen": "^0.66.1",
+    "react-native-tscodegen-types": "^0.65.3",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "**/ansi-regex": "^5.0.0"
   },
   "peerDependencies": {
     "react": "*",

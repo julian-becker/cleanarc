@@ -8,10 +8,12 @@
             "packages/*"
         ],
         "nohoist": [
+            "**/@workspace/react-native-cpp-module1",
+            "**/@workspace/app",
             "**/react-native",
             "**/react-native/**",
             "**/react-native-*",
-            "**/@react-native-community/cli"
+            "**/@react-native-community/**"
         ]
     }
 }
